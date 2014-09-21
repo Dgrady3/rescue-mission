@@ -1,0 +1,23 @@
+<h2>Question details page:</h2>
+<p><%= link_to "Remove Question", question_path(@question), method: :delete %></p>
+
+<h4>Title: <%=@question.title%></h4>
+
+<p>Description: <%=@question.description%></p>
+
+
+
+<h3>Answers</h3>
+<%@question.answers.each do |answer|%>
+<ul>
+  <li><%=answer.description%></li>
+</ul>
+<%end%>
+
+<h3>Add an answer!</h3>
+<%=render 'answers/form' %>
+
+
+
+<%=link_to'Back to questions homepage', questions_path %>
+

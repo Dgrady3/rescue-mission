@@ -1,0 +1,11 @@
+<h3>Post a Quesiton!</h3>
+<%=flash[:notice]%>
+<%= form_for @question do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description, size: "60x12" %>
+  <%= f.submit "Post" %>
+<% end %>
+
+
+
+

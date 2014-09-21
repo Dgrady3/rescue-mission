@@ -1,0 +1,6 @@
+<div>
+  <%= form_for ([@question, @question.answers.build]) do |f| %>
+    <%= f.text_area :description %>
+    <%= f.submit %>
+  <%end%>
+</div>
